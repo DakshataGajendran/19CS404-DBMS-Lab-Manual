@@ -37,124 +37,137 @@ HAVING condition;
 ```
 
 **Question 1**
---
--- Paste Question 1 here
+---
+![image](https://github.com/user-attachments/assets/f04ded3c-f9a9-4a5b-8a2a-6ad93d9ae5a2)
+
 
 ```sql
--- Paste your SQL code below for Question 1
+SELECT Medication, count(*) as TotalPrescriptions from Prescriptions GROUP BY Medication;
 ```
 
 **Output:**
-
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/86529338-6e4c-48a2-82ff-d672366e7c70)
 
 **Question 2**
 ---
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/13ee6e0e-bd4e-4e2a-b39e-1f7e5758969a)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+select Gender, count(*) as TotalPatients from Patients group by Gender;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/bfe784c2-2437-4262-b8e0-718a1b174251)
 
-![Output2](output.png)
 
 **Question 3**
 ---
--- Paste Question 3 here
+![image](https://github.com/user-attachments/assets/2512ee5c-a6e7-4f1b-86e6-987fad8608f1)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+select date(AppointmentDateTime) as AppointmentDate,
+count(*) as TotalAppointments from  Appointments group by date(AppointmentDateTime) order by AppointmentDate;
 ```
 
 **Output:**
-
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/da805e1d-d19b-4c31-b7db-f0b96766759b)
 
 **Question 4**
 ---
--- Paste Question 4 here
+![image](https://github.com/user-attachments/assets/96a33d20-9d8a-4996-b8e2-7757bd175cfa)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+select count(*) as COUNT from customer where city = 'Noida';
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/fa6cd22b-c8d0-458a-ac66-e03f1d517255)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+![image](https://github.com/user-attachments/assets/8ce85d5c-5556-4559-8b3f-f5c3d3bf0e4b)
+
 
 ```sql
--- Paste your SQL code below for Question 5
+select COUNT(*) as COUNT from customer where grade is not null;
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/ff61b499-87b5-484d-8a2a-e66c41d0237c)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+![image](https://github.com/user-attachments/assets/6f0ca657-b0e4-42a6-823e-0c6e06d1f2fe)
+
 
 ```sql
--- Paste your SQL code below for Question 6
+select SUM(income) as "total_income" from employee where age >= 40;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/9d27319f-e044-401b-8027-cb27bec6664c)
 
-![Output6](output.png)
 
 **Question 7**
 ---
--- Paste Question 7 here
+![image](https://github.com/user-attachments/assets/494e07c9-fb29-4d26-966e-a717371fb103)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+select address,SUM(salary) from customer1 group by address having sum(salary) > 2000;
 ```
 
 **Output:**
+![image](https://github.com/user-attachments/assets/fdbd7825-c8e1-4d16-947f-e4e235a7602c)
 
-![Output7](output.png)
 
 **Question 8**
 ---
--- Paste Question 8 here
+![image](https://github.com/user-attachments/assets/cf860c6a-6030-4b11-ad26-8ce1ff0b1179)
 
 ```sql
--- Paste your SQL code below for Question 8
+select city, SUM(income) as Income from employee group by city having SUM(income) > 200000;
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/277ce56d-e50e-4381-a637-6d4b748ddc5c)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+![image](https://github.com/user-attachments/assets/6bec265c-622b-4ee5-8542-bda00af11d5e)
+
 
 ```sql
--- Paste your SQL code below for Question 9
+select jdate, MAX(workhour) from employee1 group by jdate having MAX(workhour) > 12;
 ```
 
 **Output:**
 
-![Output9](output.png)
+![image](https://github.com/user-attachments/assets/877d43bf-c20a-48d3-8ae5-4392d343fb79)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+![image](https://github.com/user-attachments/assets/74df017d-aaf7-48dd-9970-37df934be482)
+
 
 ```sql
--- Paste your SQL code below for Question 10
+select DoctorID,count(*) as TotalPrescriptions from Prescriptions group by DoctorID
 ```
 
 **Output:**
 
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/54bda26f-9c93-48fd-ad64-5c90b7b7d655)
+
 
 
 ## RESULT
