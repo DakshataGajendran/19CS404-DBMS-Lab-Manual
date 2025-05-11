@@ -105,27 +105,42 @@ CREATE TABLE Table_Name (
 
 **Question 1**
 --
--- Paste Question 1 here
+![image](https://github.com/user-attachments/assets/988fd11e-75c1-42d3-b6a3-491dd2338c5f)
+
 
 ```sql
--- Paste your SQL code below for Question 1
+create table Events(
+EventID INTEGER,
+EventName TEXT,
+EventDate  DATE);
+
 ```
 
 **Output:**
 
-![Output1](output.png)
+![image](https://github.com/user-attachments/assets/2e0ebb82-538e-469f-88a4-1397cdd99e91)
+
 
 **Question 2**
 ---
--- Paste Question 2 here
+![image](https://github.com/user-attachments/assets/a774a2e5-208f-4d0d-9d27-09ef11e94850)
+
 
 ```sql
--- Paste your SQL code below for Question 2
+create table Shipments(
+ShipmentID INTEGER primary key,
+ShipmentDate DATE,
+SupplierID INTEGER,
+OrderID INTEGER,
+foreign key (SupplierID) references Suppliers(SupplierID),
+foreign key (OrderID) references  Orders(OrderID));
+
 ```
 
 **Output:**
 
-![Output2](output.png)
+![image](https://github.com/user-attachments/assets/b139e1fd-ddb4-4004-8732-faa348956471)
+
 
 **Question 3**
 ---
