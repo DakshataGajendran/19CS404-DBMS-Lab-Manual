@@ -144,99 +144,143 @@ foreign key (OrderID) references  Orders(OrderID));
 
 **Question 3**
 ---
--- Paste Question 3 here
+![image](https://github.com/user-attachments/assets/1259c172-3fc1-445a-ac2f-cb446bf5c60a)
+
 
 ```sql
--- Paste your SQL code below for Question 3
+alter table employee add column first_name varchar(50);
+alter table employee add column last_name varchar(50);
 ```
 
 **Output:**
 
-![Output3](output.png)
+![image](https://github.com/user-attachments/assets/46601632-6b0a-4ce8-a43f-7c0a5bbe8953)
+
 
 **Question 4**
 ---
--- Paste Question 4 here
+
+![image](https://github.com/user-attachments/assets/111b2368-35f8-4043-810f-7aee53d7a629)
+
 
 ```sql
--- Paste your SQL code below for Question 4
+insert into Employee(EmployeeID,Name,Position) values (5,'George Clark','Consultant');
+insert into Employee(EmployeeID,Name,Position,Department,Salary) values (7,'Noah Davis','Manager','HR', 60000);
+insert into Employee(EmployeeID,Name,Position,Department)values (8,'Ava Miller','Consultant','IT');
 ```
 
 **Output:**
 
-![Output4](output.png)
+![image](https://github.com/user-attachments/assets/008f2bfb-77c5-4c5a-9737-f6bcfdb697c2)
+
 
 **Question 5**
 ---
--- Paste Question 5 here
+
+![image](https://github.com/user-attachments/assets/73160fb4-0469-4d14-a801-9e798e5061e4)
 
 ```sql
--- Paste your SQL code below for Question 5
+alter table employee rename column id to employee_id;
 ```
 
 **Output:**
 
-![Output5](output.png)
+![image](https://github.com/user-attachments/assets/176b6fad-bc50-4f47-aba2-0772b7f29dc1)
+
 
 **Question 6**
 ---
--- Paste Question 6 here
+
+![image](https://github.com/user-attachments/assets/40aa3cbb-22c8-40db-b5d2-96be49849ef3)
+
 
 ```sql
--- Paste your SQL code below for Question 6
+create table Members(
+MemberID INTEGER,
+MemberName TEXT,
+JoinDate DATE);
+
 ```
 
 **Output:**
 
-![Output6](output.png)
+![image](https://github.com/user-attachments/assets/0bdfe8ad-4ecc-42c7-aa16-c0a617d3daa9)
+
 
 **Question 7**
 ---
--- Paste Question 7 here
+
+![image](https://github.com/user-attachments/assets/43dbfa57-1fc1-4b9e-adc5-8cf1159546ff)
+
 
 ```sql
--- Paste your SQL code below for Question 7
+create table Invoices(
+InvoiceID INTEGER primary key,
+InvoiceDate DATE NOT NULL,
+Amount REAL check(Amount >0),
+DueDate DATE check(DueDate > InvoiceDate),
+OrderID INTEGER ,
+FOREIGN KEY (OrderID) REFERENCES Orders(OrderID));
 ```
 
 **Output:**
 
-![Output7](output.png)
+![image](https://github.com/user-attachments/assets/6586bba4-c6ca-4982-9606-5827ad0d1708)
+
 
 **Question 8**
 ---
--- Paste Question 8 here
+
+![image](https://github.com/user-attachments/assets/b8f8e9a3-5960-483d-be24-311bfbd8bd62)
+
 
 ```sql
--- Paste your SQL code below for Question 8
+alter table Companies ADD designation varchar(50);
+alter table Companies ADD net_salary  number;
+alter table Companies ADD dob date;
 ```
 
 **Output:**
 
-![Output8](output.png)
+![image](https://github.com/user-attachments/assets/249680f6-11f3-4397-84f2-208af3932b34)
+
 
 **Question 9**
 ---
--- Paste Question 9 here
+
+![image](https://github.com/user-attachments/assets/a3ee4890-2a3f-4172-8113-7e9cec342f4d)
+
 
 ```sql
--- Paste your SQL code below for Question 9
+create table item(
+item_id TEXT primary key,
+item_desc TEXT,
+rate INTEGER,
+icom_id TEXT,
+foreign key(icom_id) references company(com_id) on update cascade on delete cascade,
+check(length(icom_id)=4)
+);
 ```
 
 **Output:**
 
-![Output9](output.png)
+
+![image](https://github.com/user-attachments/assets/61985adf-11fe-42e7-9abc-10face5251d1)
+
 
 **Question 10**
 ---
--- Paste Question 10 here
+
+![image](https://github.com/user-attachments/assets/e77e29ab-e9ab-443b-a836-7dcfbbb39c8d)
+
 
 ```sql
--- Paste your SQL code below for Question 10
+alter table Student_details add ParentsNumber number;
+alter table Student_details add Adhar_Number number;
 ```
 
 **Output:**
-
-![Output10](output.png)
+![image](https://github.com/user-attachments/assets/5500c7f3-c520-4af2-a005-7ac9bdf046ec)
 
 
 ## RESULT
